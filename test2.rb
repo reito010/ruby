@@ -1,22 +1,6 @@
-m = gets.to_i
-n = gets.to_i
+user_data.each do |u|
+  puts u[:user][:profile][:name]
+end
 
-i = 0
-
-if n < m
-  m.times do
-    i += 1
-  end
-elsif n > m  
-  n.times do
-    i += n
-  end
-end  
-
-i += 1
-i = i+1
-
-i = 0+1
-i = 1+1
-i = 2+1
-i = 3+1
+あるいは
+user_data.each{ |u| puts u.dig(:user, :profile, :name) }
